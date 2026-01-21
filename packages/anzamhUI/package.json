@@ -1,0 +1,10 @@
+{
+  "name": "@ah/anzamhui",
+  "version": "1.0.0",
+  "description": "This is our UI library for our projects",
+  "main": "index.ts",
+  "repository": "https://www.github.com/amzamulh/ah-portfolios",
+  "author": "Md Amzamul Haque",
+  "license": "MIT",
+  "private": true
+}
