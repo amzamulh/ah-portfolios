@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "composite": true,
+      "declaration": true,
+      "declarationMap": true,
+      "emitDeclarationOnly": false,
+      "outDir": "dist",
+      "noEmit": false,
+      "jsx": "react-jsx"
+    },
+    "include": ["ahui/src", "src/test/Button.test.tsx"],
+    "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx", "**/*.stories.tsx"]
+  }

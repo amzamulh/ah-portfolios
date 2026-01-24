@@ -14,14 +14,27 @@ function getAbsolutePath(value: string) {
 const config: StorybookConfig = {
   "stories": [
     "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../ahui/src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   "addons": [
     getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@storybook/addon-vitest'),
+    // getAbsolutePath('@storybook/addon-vitest'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/addon-docs')
   ],
-  "framework": getAbsolutePath('@storybook/react-vite')
+  "framework": getAbsolutePath('@storybook/react-vite'),
+   async viteFinal(config) {
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve?.alias,
+          '@ah/anzamhui': '../ahui/src',
+        },
+      },
+    };
+  },
 };
 export default config;
