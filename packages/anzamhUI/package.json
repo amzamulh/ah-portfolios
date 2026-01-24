@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "gen-exports": "node scripts/generate-exports.js",
     "build": "vite build --config vite.lib.config.ts",
     "build:watch": "vite build --config vite.lib.config.ts --watch",
+    "build:all": "yarn run build && yarn run gen-exports",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
