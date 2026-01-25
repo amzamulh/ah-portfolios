@@ -22,6 +22,9 @@ const exportMap = {
     import: "./dist/index.js",
     types: "./dist/index.d.ts",
   },
+  "./style": {
+    default: "./dist/anzamhui.css",
+  },
 };
 
 /* ---------------- utilities ---------------- */
@@ -56,6 +59,7 @@ function walk(dir, basePath) {
         const key = `./${exportPath}`;
 
         exportMap[key] = {
+          import: `./dist/${exportPath}/index.js`,
           import: `./dist/${exportPath}/index.js`,
           types: `./dist/${exportPath}/index.d.ts`,
         };
