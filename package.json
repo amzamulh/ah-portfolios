@@ -1,5 +1,5 @@
 {
-  "name": "anzamh-beta",
+  "name": "@ah/core",
   "private": true,
   "scripts": {
     "build": "turbo run build",

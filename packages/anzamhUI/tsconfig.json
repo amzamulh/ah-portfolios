@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ah/": ["./ahui/src/index.ts"],
+      "@ah/*": ["./ahui/src/*"],
+      "@ah/atoms": ["./ahui/src/components/atoms/index.ts"],
+      "@ah/atoms/*": ["./ahui/src/components/atoms/*"],
+      "@ah/molecules": ["./ahui/src/components/molecules/index.ts"],
+      "@ah/molecules/*": ["./ahui/src/components/molecules/*"],
+      "@ah/organisms": ["./ahui/src/components/organisms/index.ts"],
+      "@ah/organisms/*": ["./ahui/src/components/organisms/*"],
+      "@ah/templates": ["./ahui/src/components/templates/index.ts"],
+      "@ah/templates/*": ["./ahui/src/components/templates/*"],
+      "@ah/hooks": ["./ahui/src/components/hooks/index.ts"],
+      "@ah/hooks/*": ["./ahui/src/components/hooks/*"]
+    },
+    "types": ["vite/client", "@testing-library/jest-dom", "vitest/globals"]
+  },
+  "include": [
+    "ahui/src",
+    "src", 
+    "test", 
+    "tests", 
+    "stories", 
+    "vite.config.ts",
+    "vite.lib.config.ts",
+    ".storybook/**/*",
+    "src/test/**/*"
+  ],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.lib.json" }
+  ]
+}
